@@ -14,6 +14,6 @@
 @168zccdi
 
 <h2>使用 QRcode 加入 LINE 好友</h2>
-https://qr-official.line.me/sid/L/168zccdi.png
+https://github.com/galinhs/linebotrepo/blob/master/168zccdi.png?raw=true
 
 <h3>公開資料來源</h3>：https://scidm.nchc.org.tw/dataset/drink-water
