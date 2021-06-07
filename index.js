@@ -108,7 +108,6 @@ bot.on('message', async event => {
     }
   } catch (error) {
     console.log(error)
-    const errormsg = ['請重新提供定位資訊']
-    event.reply(errormsg)
+    event.reply('發生錯誤')
   }
 })
