@@ -105,9 +105,6 @@ bot.on('message', async event => {
 
       event.reply(reply)
       console.log(reply)
-    } else {
-      event.reply('請提供定位資訊')
-      console.log('無定位')
     }
   } catch (error) {
     console.log(error)
