@@ -103,13 +103,19 @@ bot.on('message', async event => {
         })
         .slice(0, 4)
 
-      reply = reply.length === 0 ? '請提供定位資訊' : reply
-
       event.reply(reply)
       console.log(reply)
     }
+    if (reply.length === 0) {
+      event.reply('你提供的定位點附近是一片荒漠耶\n沒有補給站QQ')
+    }
+    if (event.message.type !== 'location') {
+      event.reply('請提供定位資訊')
+      console.log('無定位')
+    }
   } catch (error) {
     console.log(error)
-    event.reply('發生錯誤')
+    const errormsg = ['請重新提供定位資訊']
+    event.reply(errormsg)
   }
 })
