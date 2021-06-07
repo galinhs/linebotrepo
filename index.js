@@ -105,11 +105,12 @@ bot.on('message', async event => {
 
       event.reply(reply)
       console.log(reply)
-    }
-    if (reply.length === 0) {
-      event.reply('你提供的定位點附近是一片荒漠耶\n沒有補給站QQ')
-    }
-    if (event.message.type !== 'location') {
+
+      if (reply.length === 0) {
+        console.log('沒東西')
+        event.reply('你提供的定位點附近是一片荒漠耶\n沒有補給站QQ')
+      }
+    } else {
       event.reply('請提供定位資訊')
       console.log('無定位')
     }
