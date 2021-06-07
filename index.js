@@ -10,11 +10,9 @@ let data = []
 
 const getData = () => {
   axios
-    .get(
-      'https://overpass.nchc.org.tw/api/interpreter?data=%2F*%0AThis%20has%20been%20generated%20by%20the%20overpass-turbo%20wizard.%0AThe%20original%20search%20was%3A%0A%E2%80%9Ctype%3Anode%20and%20amenity%3Ddrinking_water%20in%20TW%E2%80%9D%0A*%2F%0A%5Bout%3Ajson%5D%5Btimeout%3A25%5D%3B%0A%2F%2F%20fetch%20area%20%E2%80%9CTW%E2%80%9D%20to%20search%20in%0Aarea%283600449220%29-%3E.searchArea%3B%0A%2F%2F%20gather%20results%0A%28%0A%20%20%2F%2F%20query%20part%20for%3A%20%E2%80%9Camenity%3Ddrinking_water%E2%80%9D%0A%20%20node%5B%22amenity%22%3D%22drinking_water%22%5D%28area.searchArea%29%3B%0A%29%3B%0A%2F%2F%20print%20results%0Aout%20body%3B%0A%3E%3B%0Aout%20skel%20qt%3B'
-    )
+    .get('https://data.taipei/api/v1/dataset/59629791-5f4f-4c91-903b-e9ab9aa0653b?scope=resourceAquire')
     .then(response => {
-      data = response.data.elements
+      data = response.data.results
     })
     .catch()
 }
@@ -72,8 +70,8 @@ bot.on('message', async event => {
 
       let reply = []
       for (const d of data) {
-        const lat2 = d.lat
-        const lon2 = d.lon
+        const lat2 = d.緯度
+        const lon2 = d.經度
 
         const dis = distance(lat1, lon1, lat2, lon2, 'K')
 
@@ -82,10 +80,10 @@ bot.on('message', async event => {
         if (dis <= 1.5) {
           reply.push({
             type: 'location',
-            title: d.tags.description || '未知地點',
-            address: d.tags.description || '未知地點',
-            latitude: d.lat,
-            longitude: d.lon,
+            title: d.場所名稱,
+            address: d.地址,
+            latitude: d.緯度,
+            longitude: d.經度,
             dis
           })
         }
