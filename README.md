@@ -1,13 +1,13 @@
 <h1>飲水補給站</h1>
 
-飲水補給站是協助使用者尋找到指定位置附近飲用水資源的 line-bot。
+飲水補給站是協助使用者尋找到＂台北市內指定位置附近的直飲台＂的 line-bot。
 
 <h2>使用說明 :</h2>
 1. 透過下方 QRcode 或輸入 ID，與飲水補給站成為好友。
 <br>
 2. 按下左下角的 "+" 圖形，點選 "位置資訊"。
 <br>
-3. 點擊畫面深色地址一下，將目前的定位送出。 ( 若不是要使用目前位置，也可以使用搜尋功能，查詢目的地，搜尋完成後再點擊深色地址送出即可。)
+3. 點擊畫面深色地址一下，將目前的定位送出。 ( 若不是要使用目前位置，也可以使用搜尋功能查詢目的地，搜尋完成後再點擊深色地址送出。)
 <br>
 4. 靜待 3 秒，即可收到指定位置附近的飲用水資源。
 <br>
@@ -23,4 +23,5 @@
 ![image](https://github.com/galinhs/linebotrepo/blob/master/168zccdi.png)
 
 <h4>公開資料來源</h4>
-https://scidm.nchc.org.tw/dataset/drink-water
+
+https://data.taipei/api/v1/dataset/59629791-5f4f-4c91-903b-e9ab9aa0653b?scope=resourceAquire
