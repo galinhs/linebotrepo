@@ -12,7 +12,7 @@ const getData = () => {
   axios
     .get('https://data.taipei/api/v1/dataset/59629791-5f4f-4c91-903b-e9ab9aa0653b?scope=resourceAquire')
     .then(response => {
-      data = response.data.results
+      data = response.data.result.results
     })
     .catch()
 }
@@ -75,7 +75,7 @@ bot.on('message', async event => {
 
         const dis = distance(lat1, lon1, lat2, lon2, 'K')
 
-        // console.log(dis)
+        console.log(dis)
 
         if (dis <= 1.5) {
           reply.push({
