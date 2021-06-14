@@ -2,7 +2,7 @@
   "type": "module",
   "name": "linebotrepo",
   "version": "1.0.0",
-  "description": "![image](https://user-images.githubusercontent.com/80209205/120107602-3eed6d00-c194-11eb-9466-fe3fcdf4d39f.png)",
+  "description": "<h1>飲水補給站</h1>",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -19,11 +19,11 @@
     "url": "https://github.com/galinhs/linebotrepo/issues"
   },
   "homepage": "https://github.com/galinhs/linebotrepo#readme",
+  "keywords": [],
   "dependencies": {
     "axios": "^0.21.1",
-    "cheerio": "^1.0.0-rc.9",
+    "cheerio": "^1.0.0-rc.10",
     "dotenv": "^10.0.0",
-    "heroku-repo": "^1.0.14",
     "linebot": "^1.6.1",
     "node-schedule": "^2.0.0"
   },
