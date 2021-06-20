@@ -18,7 +18,7 @@ const getData = () => {
 }
 
 // 每天 0 點更新資料
-schedule.scheduleJob('0 0 0 * *', getData)
+schedule.scheduleJob('0 0 0 * * *', getData)
 // 機器人啟動時也要有資料
 getData()
 
