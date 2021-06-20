@@ -20,7 +20,7 @@
 
 <h2>使用 QRcode 加入 LINE 好友</h2>
 
-![image](https://qr-official.line.me/sid/L/168zccdi.png)
+![image](https://github.com/galinhs/linebotrepo/blob/main/168zccdi.png)
 
 <h4>公開資料來源</h4>
 
