@@ -8,10 +8,11 @@ import schedule from 'node-schedule'
 
 let data = []
 
-const getData = () => {
+const getData = async() => {
   axios
     .get('https://data.taipei/api/v1/dataset/59629791-5f4f-4c91-903b-e9ab9aa0653b?scope=resourceAquire')
     .then(response => {
+      console.log('成功取得資料')
       data = response.data.result.results
     })
     .catch()
