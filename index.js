@@ -15,13 +15,10 @@ const getData = async() => {
       console.log('成功取得資料')
       data = response.data.result.results
     })
-    .catch()
+    .catch(console.log('取得失敗'))
 }
 
-// 每天 0 點更新資料
-schedule.scheduleJob('0 0 0 * * *', getData)
-// 機器人啟動時也要有資料
-getData()
+
 
 // 讓套件讀取 .env 檔案
 // 讀取後可以用 process.env.變數 使用
@@ -64,6 +61,11 @@ const distance = (lat1, lon1, lat2, lon2, unit = 'K') => {
 }
 
 bot.on('message', async event => {
+  // 每天 0 點更新資料
+  schedule.scheduleJob('0 0 0 * * *', getData)
+  // 機器人啟動時也要有資料
+  getData()
+
   try {
     if (event.message.type === 'location') {
       const lat1 = event.message.latitude
