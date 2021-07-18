@@ -108,7 +108,7 @@ bot.on('message', async event => {
       console.log(reply)
 
       if (reply.length === 0) {
-        event.reply('你提供的定位點附近是一片荒漠耶\n沒有補給站😭')
+        event.reply('你提供的定位點附近是一片荒漠耶\n請提供新的定位資訊給我喔')
       }
     }
     if (event.message.type !== 'location') {
@@ -117,6 +117,6 @@ bot.on('message', async event => {
     }
   } catch (error) {
     console.log(error)
-    event.reply('修但幾咧🥺請重新提供定位資訊給我')
+    event.reply('修但幾咧！\n機器人短路了請重新提供定位資訊給我！')
   }
 })
